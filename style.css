@@ -309,12 +309,15 @@ span.greeting {
 .education-card {
     flex: 0 1 320px;
     max-width: 320px;
+    min-height: 380px;
     position: relative;
     background: rgba(20, 25, 35, 0.7);
     padding: 3rem 2.5rem;
     border-radius: 1.2rem;
     border: 1px solid rgba(255, 255, 255, 0.06);
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .education-card:hover {
