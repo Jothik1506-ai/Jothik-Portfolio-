@@ -222,8 +222,8 @@
         <h2 class="heading">My <span>Education</span></h2>
 
         <div class="education-timeline">
-            <div class="education-row">
-                <!-- Education Card (Top Left) -->
+            <div class="education-row single-row">
+                <!-- B.TECH Card (Left) -->
                 <div class="education-card">
                     <div class="education-label">B.TECH</div>
                     <div class="education-content">
@@ -234,7 +234,7 @@
                     </div>
                 </div>
 
-                <!-- SSC Card (Top Right) -->
+                <!-- SSC Card (Center) -->
                 <div class="education-card">
                     <div class="education-label">SSC</div>
                     <div class="education-content">
@@ -245,22 +245,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Timeline Connector (Center) -->
-            <div class="timeline-connector-wrapper">
-                <div class="timeline-connector">
-                    <div class="connector-dot"></div>
-                    <div class="connector-line horizontal"></div>
-                    <div class="connector-dot"></div>
-                    <div class="connector-line horizontal"></div>
-                    <div class="connector-dot"></div>
-                </div>
-            </div>
-
-            <!-- Diploma Card (Bottom Center) -->
-            <div class="education-row bottom">
-                <div class="education-card centered">
+                <!-- Diploma Card (Right) -->
+                <div class="education-card">
                     <div class="education-label">Diploma</div>
                     <div class="education-content">
                         <h3>Diploma in ECE</h3>
@@ -282,17 +269,18 @@
             <p><i class="fa-solid fa-envelope"></i> vanamjothik@gmail.com</p>
         </div>
 
-        <form action="#">
+        <form id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" id="from_name" name="from_name" placeholder="Full Name" required>
+                <input type="email" id="from_email" name="from_email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
+                <input type="text" id="subject" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn" id="submit-btn">
+            <div id="form-message" style="margin-top: 1rem; font-size: 1.4rem; text-align: center;"></div>
         </form>
     </section>
 
@@ -304,6 +292,9 @@
             <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </div>
     </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script src="script.js"></script>
 </body>

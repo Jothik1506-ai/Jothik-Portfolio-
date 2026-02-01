@@ -297,65 +297,67 @@ span.greeting {
 .education-row {
     display: flex;
     justify-content: center;
-    gap: 35rem;
+    gap: 2.5rem;
     width: 100%;
+    flex-wrap: wrap;
 }
 
-.education-row.bottom {
-    justify-content: center;
+.education-row.single-row {
+    gap: 2.5rem;
 }
 
 .education-card {
-    flex: 0 1 400px;
-    max-width: 400px;
+    flex: 0 1 320px;
+    max-width: 320px;
     position: relative;
-}
-
-.education-card.centered {
-    margin: 0 auto;
-}
-
-.education-label {
-    font-size: 1.4rem;
-    color: var(--main-color);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.education-content {
-    background: var(--glass-bg);
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    border: 1px solid var(--border-color);
+    background: rgba(20, 25, 35, 0.7);
+    padding: 3rem 2.5rem;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
     transition: 0.3s;
 }
 
-.education-content:hover {
+.education-card:hover {
     transform: translateY(-5px);
-    border-color: var(--main-color);
-    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+    border-color: rgba(0, 210, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
+    background: rgba(20, 25, 35, 0.85);
+}
+
+.education-label {
+    font-size: 1.1rem;
+    color: var(--main-color);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.education-content {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
 }
 
 .education-content h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
     color: var(--text-color);
     font-weight: 600;
 }
 
 .education-content .institution {
-    font-size: 1.5rem;
-    color: #aaa;
-    margin-bottom: 1rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    color: #999;
+    margin-bottom: 1.2rem;
+    font-weight: 400;
 }
 
 .education-content .description {
-    font-size: 1.4rem;
-    color: #999;
-    line-height: 1.6;
+    font-size: 1.35rem;
+    color: #888;
+    line-height: 1.7;
 }
 
 /* Timeline Connector */

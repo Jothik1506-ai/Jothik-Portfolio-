@@ -88,3 +88,86 @@ document.querySelectorAll('.about-content, .skills-container, .input-box, textar
     el.style.transition = 'all 0.6s ease-out';
     observer.observe(el);
 });
+
+// ============================================
+// CONTACT FORM - EmailJS Integration
+// ============================================
+
+// Initialize EmailJS with your Public Key
+// IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+emailjs.init('YOUR_PUBLIC_KEY');
+
+// Contact Form Handler
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formMessage = document.getElementById('form-message');
+
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('from_name').value.trim();
+    const email = document.getElementById('from_email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Basic validation
+    if (!name || !email || !phone || !subject || !message) {
+        showMessage('Please fill in all fields!', 'error');
+        return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showMessage('Please enter a valid email address!', 'error');
+        return;
+    }
+
+    // Phone validation (basic)
+    const phoneRegex = /^[0-9]{10,}$/;
+    if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
+        showMessage('Please enter a valid phone number!', 'error');
+        return;
+    }
+
+    // Show loading state
+    submitBtn.value = 'Sending...';
+    submitBtn.disabled = true;
+
+    // Send email using EmailJS
+    // IMPORTANT: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        from_name: name,
+        from_email: email,
+        phone: phone,
+        subject: subject,
+        message: message
+    })
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            showMessage('Message sent successfully! I will get back to you soon.', 'success');
+            contactForm.reset();
+            submitBtn.value = 'Send Message';
+            submitBtn.disabled = false;
+        })
+        .catch(function (error) {
+            console.log('FAILED...', error);
+            showMessage('Failed to send message. Please try again or email me directly.', 'error');
+            submitBtn.value = 'Send Message';
+            submitBtn.disabled = false;
+        });
+});
+
+// Show message function
+function showMessage(msg, type) {
+    formMessage.textContent = msg;
+    formMessage.style.color = type === 'success' ? '#00d2ff' : '#ff4444';
+    formMessage.style.fontWeight = '500';
+
+    // Clear message after 5 seconds
+    setTimeout(() => {
+        formMessage.textContent = '';
+    }, 5000);
+}
