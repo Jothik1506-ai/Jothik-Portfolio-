@@ -1,297 +1,514 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jothik - Portfolio</title>
-    <meta name="description" content="Portfolio of Jothik - Aspiring Software Developer & AI Enthusiast">
+    <title>Jothik — AI & Machine Learning Engineer</title>
+    <meta name="description" content="Portfolio of Jothik — Aspiring AI & Machine Learning Engineer building intelligent, data-driven solutions with Python and Deep Learning.">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jothik | AI & ML Engineer Portfolio">
+    <meta property="og:description" content="AI & Machine Learning projects, web apps, and data-driven solutions built with Python, JavaScript, and modern AI tools.">
+    <meta property="og:image" content="Linkedin profile picture.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jothik | AI & ML Engineer Portfolio">
+    <meta name="twitter:description" content="AI & Machine Learning projects, web apps, and data-driven solutions built with Python, JavaScript, and modern AI tools.">
+    <meta name="twitter:image" content="Linkedin profile picture.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Jothik",
+            "jobTitle": "AI & Machine Learning Engineer",
+            "description": "Aspiring AI & Machine Learning Engineer building data-driven applications using Python, web technologies, and modern AI tools.",
+            "email": "mailto:vanamjothik@gmail.com",
+            "telephone": "+91-7396982619",
+            "sameAs": [
+                "https://www.linkedin.com/in/vanamjothikkrishnasivanagasaikanth/",
+                "https://github.com/Jothik1506-ai"
+            ]
+        }
+    </script>
 </head>
 
 <body>
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
 
-    <header class="header">
-        <a href="#" class="logo">Jothik<span class="dot">.</span></a>
+    <!-- ========== LOADER ========== -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <span class="loader-initials">J</span>
+                <div class="loader-ring"></div>
+                <div class="loader-ring loader-ring-2"></div>
+            </div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+            <span class="loader-label">Loading Portfolio...</span>
+        </div>
+    </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#project">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- ========== CUSTOM CURSOR ========== -->
+    <div id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
 
-        <div class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
+    <!-- ========== SIDE NAV ========== -->
+    <nav class="side-nav" aria-label="Section navigation">
+        <ul>
+            <li><a href="#hero" class="nav-dot active" data-label="Home"><span></span></a></li>
+            <li><a href="#about" class="nav-dot" data-label="About"><span></span></a></li>
+            <li><a href="#skills" class="nav-dot" data-label="Skills"><span></span></a></li>
+            <li><a href="#projects" class="nav-dot" data-label="Projects"><span></span></a></li>
+            <li><a href="#education" class="nav-dot" data-label="Education"><span></span></a></li>
+            <li><a href="#contact" class="nav-dot" data-label="Contact"><span></span></a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== TOP BAR ========== -->
+    <header class="topbar">
+        <div class="topbar-logo">Jothik<span>.</span></div>
+        <div class="topbar-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </button>
+            <a href="mailto:vanamjothik@gmail.com" class="topbar-cta">
+                Let's Talk <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <span class="greeting">Hello, I'm</span>
-            <h1 class="name">Jothik</h1>
-            <h3 class="role"> <span class="typing-text">AI & Machine Learning Engineer</span></h3>
-            <p class="description">
-                Building practical AI and Machine Learning solutions with Python and Deep Learning. I focus on
-                developing intelligent, scalable systems that turn data into meaningful insights and real-world
-                applications.
-            </p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/vanamjothikkrishnasivanagasaikanth/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/Jothik1506-ai" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:vanamjothik@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <a href="#contact" class="btn">Let's Talk</a>
-        </div>
-        <div class="home-img">
-            <div class="img-box">
-                <div class="abstract-shape"></div>
-                <img src="Linkedin profile picture.png" alt="Jothik"
-                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 2;">
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
+        <!-- ========== HERO ========== -->
+        <section id="hero">
+            <canvas id="particle-canvas"></canvas>
 
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Aspiring Software Engineer & Problem Solver</h3>
-                <p>
-                    I am a motivated Intern with a keen interest in building scalable web applications and exploring
-                    Artificial Intelligence.
-                    My journey involves constant learning and applying modern technologies to solve real-world problems.
-                    <br><br>
-                    <strong>Focus Areas:</strong><br>
-                    ✅ Real-time API Chatbot & Integrations (e.g., OpenAI, WebSockets).<br>
-                    ✅ Artificial Intelligence & Machine Learning Integrations.<br>
-                    ✅ Full Stack Web Development (HTML, CSS, JS, Python).<br>
-                    ✅ Building user-centric and responsive interfaces.
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Open to Opportunities
+                </div>
+
+                <h1 class="hero-name">
+                    <span class="name-reveal">Jothik</span>
+                    <span class="name-reveal accent-grad"></span>
+                </h1>
+
+                <div class="hero-role-wrap">
+                    <span class="role-static">I build&nbsp;</span>
+                    <div class="role-cycle" id="roleCycle">
+                        <span class="role-word active">AI Solutions</span>
+                        <span class="role-word">ML Models</span>
+                        <span class="role-word">Python Apps</span>
+                        <span class="role-word">Data Insights</span>
+                    </div>
+                </div>
+
+                <p class="hero-sub">
+                    Building intelligent AI &amp; ML solutions with Python and Deep Learning. I turn data into meaningful insights and real-world applications.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <section class="experience" id="project">
-        <h2 class="heading">My <span>Projects / Experience</span></h2>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary magnetic">View My Projects</a>
+                    <a href="#contact" class="btn btn-ghost magnetic">Get In Touch</a>
+                </div>
 
-        <div class="timeline">
-            <!-- Project 1: Real-time AI Chat (RECENT) -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Recent Work</div>
-                <div class="timeline-content">
-                    <h3>Real-time AI Chat Assistant</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">EnglishSprings - Opportunity as Starters</p>
-                    <p>Created a Real-time Agent using OpenAI's Realtime API. Developed a conversational AI system for
-                        seamless voice interaction, leveraging WebSockets for low-latency communication.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">
+                            <span class="stat-num" data-target="2">0</span><span class="stat-suf">+</span>
+                        </div>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <div class="stat-value">
+                            <span class="stat-num" data-target="7">0</span><span class="stat-suf">+</span>
+                        </div>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <div class="stat-value">
+                            <span class="stat-num" data-target="4">0</span><span class="stat-suf">+</span>
+                        </div>
+                        <span class="stat-label">AI Frameworks</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 2: Wellness Browser (RECENT) -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Recent</div>
-                <div class="timeline-content">
-                    <h3>Wellness Browser</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">Electron, JS, Python</p>
-                    <p>Built a wellness-focused browser with features like breathing exercises and AI assistant
-                        integration to promote digital well-being.</p>
+            <div class="hero-visual">
+                <div class="orbit-system">
+                    <div class="orbit orbit-a"></div>
+                    <div class="orbit orbit-b"></div>
+                    <div class="orbit orbit-c"></div>
+
+                    <div class="orbit-icon icon-1"><i class="fa-solid fa-brain"></i></div>
+                    <div class="orbit-icon icon-2"><i class="fa-brands fa-python"></i></div>
+                    <div class="orbit-icon icon-3"><i class="fa-solid fa-robot"></i></div>
+                    <div class="orbit-icon icon-4"><i class="fa-solid fa-chart-line"></i></div>
+
+                    <div class="profile-frame">
+                        <img src="Linkedin profile picture.png" alt="Jothik — AI & ML Engineer" class="profile-img">
+                        <div class="profile-glow"></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 3: Global Terrorism Dashboard -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Python</div>
-                <div class="timeline-content">
-                    <h3>Global Terrorism Dashboard</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">Data Analytics & Visualization</p>
-                    <p>Created an interactive dashboard analyzing global terrorism data with visualizations and
-                        insights. Implemented data processing and visualization using Python libraries.</p>
-                    <a href="https://global-terrorism-dashboard-15jb.streamlit.app" target="_blank"
-                        style="display: inline-block; margin-top: 1rem; color: var(--main-color); text-decoration: underline; font-size: 1.4rem; font-weight: 500;">
-                        🔗 View Live Demo
+            <div class="scroll-hint">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section id="about">
+            <div class="section-tag">01 / About</div>
+
+            <div class="about-grid">
+                <div class="about-left">
+                    <div class="about-card glass-card" data-tilt>
+                        <div class="about-img-frame">
+                            <img src="Linkedin profile picture.png" alt="Jothik" class="about-img">
+                            <div class="corner tl"></div>
+                            <div class="corner tr"></div>
+                            <div class="corner bl"></div>
+                            <div class="corner br"></div>
+                        </div>
+                        <div class="about-meta">
+                            <div class="meta-row"><i class="fa-solid fa-location-dot"></i> Hyderabad, India</div>
+                            <div class="meta-row"><i class="fa-solid fa-graduation-cap"></i> B.Tech Student @ ICFAI</div>
+                            <div class="meta-row"><i class="fa-solid fa-brain"></i> AI & Machine Learning</div>
+                        </div>
+                        <div class="about-socials">
+                            <a href="https://www.linkedin.com/in/vanamjothikkrishnasivanagasaikanth/" target="_blank" class="soc-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Jothik1506-ai" target="_blank" class="soc-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:vanamjothik@gmail.com" class="soc-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <h2 class="section-title reveal-up">The Code Behind<br><em>Every Insight.</em></h2>
+
+                    <div class="about-body">
+                        <p class="reveal-up">I'm an <mark>AI & ML Engineer</mark> in the making, currently pursuing B.Tech at ICFAI Foundation for Higher Education, Hyderabad. I'm passionate about building intelligent systems that solve real problems.</p>
+                        <p class="reveal-up">My focus spans <mark>Natural Language Processing</mark> and <mark>Computer Vision</mark>, where I've built practical projects — from real-time AI chat assistants to emotion detection systems.</p>
+                        <p class="reveal-up">Currently exploring opportunities where I can apply my skills in <strong>Python, Deep Learning</strong>, and modern AI frameworks to create impactful solutions.</p>
+                    </div>
+
+                    <div class="ach-list reveal-up">
+                        <div class="ach-item">
+                            <div class="ach-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                            <span>Built real-time AI chat using OpenAI Realtime API with WebSockets</span>
+                        </div>
+                        <div class="ach-item">
+                            <div class="ach-icon"><i class="fa-solid fa-brain"></i></div>
+                            <span>Developed ML models for NLP, Computer Vision &amp; Healthcare Analytics</span>
+                        </div>
+                        <div class="ach-item">
+                            <div class="ach-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                            <span>Created interactive data dashboards with Python &amp; Streamlit</span>
+                        </div>
+                    </div>
+
+                    <a href="mailto:vanamjothik@gmail.com" class="btn btn-primary reveal-up">
+                        Contact Me <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+        </section>
 
-            <!-- Project 4: Sentiment Analyzer -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Python</div>
-                <div class="timeline-content">
-                    <h3>Sentiment Analyzer YBI</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">Natural Language Processing</p>
-                    <p>Built a sentiment analysis tool using Python to analyze and classify text data into positive,
-                        negative, or neutral sentiments. Implemented NLP techniques for text preprocessing and
-                        classification.</p>
-                </div>
+        <!-- ========== SKILLS ========== -->
+        <section id="skills" class="bg-alt">
+            <div class="section-tag">02 / Skills</div>
+
+            <div class="skills-head">
+                <h2 class="section-title">Tools of the<br><em>Trade.</em></h2>
+                <p class="section-sub">A constellation of capabilities powering every project.</p>
             </div>
 
-            <!-- Project 5: Emotion Detection -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Python</div>
-                <div class="timeline-content">
-                    <h3>Emotion Detection from Facial Expressions YBI</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">Computer Vision & Deep Learning</p>
-                    <p>Developed a facial emotion recognition system using deep learning to detect emotions from facial
-                        expressions. Utilized CNN models for real-time emotion classification.</p>
-                </div>
-            </div>
-
-            <!-- Project 6: Cancer Log -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Python</div>
-                <div class="timeline-content">
-                    <h3>YBI Cancer Log</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">Healthcare Analytics</p>
-                    <p>Developed a cancer data logging and analysis system for tracking and analyzing cancer-related
-                        information using Python and data science techniques.</p>
-                </div>
-            </div>
-
-            <!-- Project 7: Mini Projects -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Public Template</div>
-                <div class="timeline-content">
-                    <h3>MINIPROJECTS-YBI</h3>
-                    <p style="color: var(--main-color); font-weight: 500;">Collection of Projects</p>
-                    <p>A curated collection of mini projects showcasing various programming concepts and
-                        implementations. Public template repository for learning and experimentation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-container">
-            <div class="skill-box">
-                <i class="fa-solid fa-brain"></i>
-                <h3>AI & Machine Learning</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-python"></i>
-                <h3>Python</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-js"></i>
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-git-alt"></i>
-                <h3>Git & GitHub</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fa-solid fa-server"></i>
-                <h3>Backend (FastAPI/Flask)</h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Education</span></h2>
-
-        <div class="education-timeline">
-            <div class="education-row single-row">
-                <!-- B.TECH Card (Left) -->
-                <div class="education-card">
-                    <div class="education-label">B.TECH</div>
-                    <div class="education-content">
-                        <h3>Student / Graduate</h3>
-                        <p class="institution">ICFAI Foundation for Higher Education, Hyderabad</p>
-                        <p class="description">Pursuing studies in Computer Science / Engineering, actively
-                            participating in hackathons and coding challenges.</p>
+            <div class="skills-grid">
+                <div class="skill-cat glass-card reveal-up">
+                    <h3 class="cat-label"><i class="fa-solid fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skill-rows">
+                        <div class="skill-row"><span class="skill-name">Artificial Intelligence</span><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div><span class="skill-pct">85%</span></div>
+                        <div class="skill-row"><span class="skill-name">Machine Learning</span><div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div><span class="skill-pct">82%</span></div>
+                        <div class="skill-row"><span class="skill-name">Deep Learning</span><div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div><span class="skill-pct">78%</span></div>
+                        <div class="skill-row"><span class="skill-name">NLP</span><div class="skill-bar"><div class="skill-fill" data-pct="72"></div></div><span class="skill-pct">72%</span></div>
                     </div>
                 </div>
 
-                <!-- SSC Card (Center) -->
-                <div class="education-card">
-                    <div class="education-label">SSC</div>
-                    <div class="education-content">
-                        <h3>10th Grade (SSC)</h3>
-                        <p class="institution">Prathibha High School</p>
-                        <p class="description">Completed Secondary School Certificate with strong foundation in
-                            academics.
-                        </p>
+                <div class="skill-cat glass-card reveal-up">
+                    <h3 class="cat-label"><i class="fa-solid fa-code"></i> Development</h3>
+                    <div class="skill-rows">
+                        <div class="skill-row"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div><span class="skill-pct">90%</span></div>
+                        <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div><span class="skill-pct">75%</span></div>
+                        <div class="skill-row"><span class="skill-name">Web Development</span><div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div><span class="skill-pct">78%</span></div>
+                        <div class="skill-row"><span class="skill-name">FastAPI / Flask</span><div class="skill-bar"><div class="skill-fill" data-pct="73"></div></div><span class="skill-pct">73%</span></div>
                     </div>
                 </div>
 
-                <!-- Diploma Card (Right) -->
-                <div class="education-card">
-                    <div class="education-label">Diploma</div>
-                    <div class="education-content">
-                        <h3>Diploma in ECE</h3>
-                        <p class="institution">Holy Mary Institute of Technology & Science</p>
-                        <p class="description">Completed Polytechnic Diploma in Electronics and Communication
-                            Engineering.
-                        </p>
+                <div class="skill-cat glass-card reveal-up">
+                    <h3 class="cat-label"><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
+                    <div class="skill-rows">
+                        <div class="skill-row"><span class="skill-name">Git & GitHub</span><div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div><span class="skill-pct">82%</span></div>
+                        <div class="skill-row"><span class="skill-name">OpenAI API</span><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div><span class="skill-pct">80%</span></div>
+                        <div class="skill-row"><span class="skill-name">Streamlit</span><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div><span class="skill-pct">75%</span></div>
+                        <div class="skill-row"><span class="skill-name">Electron.js</span><div class="skill-bar"><div class="skill-fill" data-pct="65"></div></div><span class="skill-pct">65%</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <!-- ========== PROJECTS ========== -->
+        <section id="projects">
+            <div class="section-tag">03 / Projects</div>
+            <h2 class="section-title">7 Projects of<br><em>Real Impact.</em></h2>
 
-        <div class="contact-info" style="text-align: center; margin-bottom: 2rem; color: #ccc;">
-            <p><i class="fa-solid fa-phone"></i> +91 7396982619</p>
-            <p><i class="fa-solid fa-envelope"></i> vanamjothik@gmail.com</p>
-        </div>
+            <div class="timeline">
+                <div class="tl-spine"></div>
 
-        <form id="contact-form">
-            <div class="input-box">
-                <input type="text" id="from_name" name="from_name" placeholder="Full Name" required>
-                <input type="email" id="from_email" name="from_email" placeholder="Email Address" required>
+                <div class="tl-item" data-side="right">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Recent Work</div>
+                        <h4 class="tl-role">Real-time AI Chat Assistant</h4>
+                        <div class="tl-company">EnglishSprings — Opportunity as Starters</div>
+                        <p>Created a real-time agent using OpenAI's Realtime API. Developed a conversational AI system for seamless voice interaction, leveraging WebSockets for low-latency communication.</p>
+                        <div class="tl-chips"><span>OpenAI API</span><span>WebSockets</span><span>Real-time</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item" data-side="left">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Recent</div>
+                        <h4 class="tl-role">Wellness Browser</h4>
+                        <div class="tl-company">Personal Project</div>
+                        <p>Built a wellness-focused browser with features like breathing exercises and an AI assistant integration to promote digital well-being and mindful technology use.</p>
+                        <div class="tl-chips"><span>Electron</span><span>JavaScript</span><span>Python</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item" data-side="right">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Python</div>
+                        <h4 class="tl-role">Global Terrorism Dashboard</h4>
+                        <div class="tl-company">Data Analytics & Visualization</div>
+                        <p>Created an interactive dashboard analyzing global terrorism data with visualizations and insights. Implemented data processing and visualization using Python libraries.</p>
+                        <div class="tl-chips"><span>Python</span><span>Streamlit</span><span>Data Analytics</span></div>
+                        <a href="https://global-terrorism-dashboard-15jb.streamlit.app" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;color:var(--accent);font-family:var(--font-mono);font-size:.72rem;">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tl-item" data-side="left">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Python</div>
+                        <h4 class="tl-role">Sentiment Analyzer YBI</h4>
+                        <div class="tl-company">Natural Language Processing</div>
+                        <p>Built a sentiment analysis tool using Python to analyze and classify text data into positive, negative, or neutral sentiments. Implemented NLP techniques for text preprocessing and classification.</p>
+                        <div class="tl-chips"><span>NLP</span><span>Python</span><span>ML</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item" data-side="right">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Python</div>
+                        <h4 class="tl-role">Emotion Detection from Facial Expressions</h4>
+                        <div class="tl-company">Computer Vision & Deep Learning — YBI</div>
+                        <p>Developed a facial emotion recognition system using deep learning to detect emotions from facial expressions. Utilized CNN models for real-time emotion classification.</p>
+                        <div class="tl-chips"><span>CNN</span><span>Computer Vision</span><span>Deep Learning</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item" data-side="left">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Python</div>
+                        <h4 class="tl-role">YBI Cancer Log</h4>
+                        <div class="tl-company">Healthcare Analytics</div>
+                        <p>Developed a cancer data logging and analysis system for tracking and analyzing cancer-related information using Python and data science techniques.</p>
+                        <div class="tl-chips"><span>Healthcare</span><span>Data Science</span><span>Python</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item" data-side="right">
+                    <div class="tl-node"><div class="tl-node-inner"></div></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-date"><i class="fa-regular fa-calendar"></i> Public Template</div>
+                        <h4 class="tl-role">MINIPROJECTS-YBI</h4>
+                        <div class="tl-company">Collection of Projects</div>
+                        <p>A curated collection of mini projects showcasing various programming concepts and implementations. Public template repository for learning and experimentation.</p>
+                        <div class="tl-chips"><span>Python</span><span>Open Source</span><span>Learning</span></div>
+                    </div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
-                <input type="text" id="subject" name="subject" placeholder="Email Subject" required>
-            </div>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn" id="submit-btn">
-            <div id="form-message" style="margin-top: 1rem; font-size: 1.4rem; text-align: center;"></div>
-        </form>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2026 by Jothik | All Rights Reserved.</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        <!-- ========== EDUCATION ========== -->
+        <section id="education" class="bg-alt">
+            <div class="section-tag">04 / Education</div>
+            <h2 class="section-title">Academic<br><em>Foundation.</em></h2>
+
+            <div class="edu-grid" style="margin-top: 44px;">
+                <div class="edu-card glass-card reveal-up">
+                    <div class="edu-ico"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="edu-body">
+                        <h4>B.Tech — Computer Science / Engineering</h4>
+                        <p class="edu-school">ICFAI Foundation for Higher Education, Hyderabad</p>
+                        <span class="edu-date">Currently Pursuing</span>
+                        <p style="font-size:.8rem;color:var(--text-muted);margin-top:8px;line-height:1.6;">Actively participating in hackathons, coding challenges, and AI/ML projects.</p>
+                    </div>
+                </div>
+
+                <div class="edu-card glass-card reveal-up">
+                    <div class="edu-ico"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="edu-body">
+                        <h4>Diploma — Electronics &amp; Communication Engineering</h4>
+                        <p class="edu-school">Holy Mary Institute of Technology &amp; Science</p>
+                        <span class="edu-date">Completed</span>
+                        <p style="font-size:.8rem;color:var(--text-muted);margin-top:8px;line-height:1.6;">Polytechnic Diploma in ECE with strong foundation in electronics and communication.</p>
+                    </div>
+                </div>
+
+                <div class="edu-card glass-card reveal-up">
+                    <div class="edu-ico"><i class="fa-solid fa-school"></i></div>
+                    <div class="edu-body">
+                        <h4>10th Grade — SSC</h4>
+                        <p class="edu-school">Prathibha High School</p>
+                        <span class="edu-date">Completed</span>
+                        <p style="font-size:.8rem;color:var(--text-muted);margin-top:8px;line-height:1.6;">Completed Secondary School Certificate with strong academic foundation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section id="contact">
+            <div class="section-tag">05 / Contact</div>
+
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <h2 class="section-title">Let's Build<br><em>Something Great.</em></h2>
+                    <p class="section-sub">Have a project in mind or want to collaborate on AI/ML solutions? I'm always open to the right conversations.</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:vanamjothik@gmail.com" class="contact-link magnetic">
+                            <div class="cl-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="cl-text">
+                                <span class="cl-label">Email</span>
+                                <span class="cl-value">vanamjothik@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:7396982619" class="contact-link magnetic">
+                            <div class="cl-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="cl-text">
+                                <span class="cl-label">Phone</span>
+                                <span class="cl-value">+91 7396982619</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vanamjothikkrishnasivanagasaikanth/" target="_blank" class="contact-link magnetic">
+                            <div class="cl-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div class="cl-text">
+                                <span class="cl-label">LinkedIn</span>
+                                <span class="cl-value">vanamjothikkrishnasivanagasaikanth</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Jothik1506-ai" target="_blank" class="contact-link magnetic">
+                            <div class="cl-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="cl-text">
+                                <span class="cl-label">GitHub</span>
+                                <span class="cl-value">Jothik1506-ai</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form glass-card" id="contact-form" novalidate>
+                        <div class="form-field">
+                            <input type="text" id="from_name" name="from_name" placeholder=" " required autocomplete="name">
+                            <label for="from_name">Your Name</label>
+                            <div class="field-line"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="from_email" name="from_email" placeholder=" " required autocomplete="email">
+                            <label for="from_email">Your Email</label>
+                            <div class="field-line"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="tel" id="phone" name="phone" placeholder=" " required autocomplete="tel">
+                            <label for="phone">Mobile Number</label>
+                            <div class="field-line"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
+                            <div class="field-line"></div>
+                        </div>
+                        <div class="form-field">
+                            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="field-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block magnetic" id="submit-btn">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div id="form-message" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Jothik<span>.</span></div>
+            <p class="footer-copy">&copy; 2026 Jothik &mdash; Built with purpose.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/vanamjothikkrishnasivanagasaikanth/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Jothik1506-ai" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:vanamjothik@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lb-backdrop"></div>
+        <div class="lb-body">
+            <button class="lb-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <img src="" alt="" id="lbImg">
+        </div>
+    </div>
 
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
