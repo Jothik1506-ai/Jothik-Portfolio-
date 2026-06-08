@@ -45,7 +45,8 @@
     <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg"
       style="overflow:visible;">
       <path class="cur-path"
-        d="M3.5 2.2 C3.2 1.9 2.8 2.0 2.8 2.4 L2.8 22.0 C2.8 22.5 3.4 22.7 3.7 22.3 L7.8 17.8 L11.6 24.2 C11.8 24.6 12.3 24.7 12.7 24.5 L14.8 23.3 C15.2 23.1 15.3 22.6 15.1 22.2 L11.4 15.8 L18.2 15.8 C18.7 15.8 19.0 15.2 18.7 14.8 Z" />
+        d="M3.5 2.2 C3.2 1.9 2.8 2.0 2.8 2.4 L2.8 22.0 C2.8 22.5 3.4 22.7 3.7 22.3 L7.8 17.8 L11.6 24.2 C11.8 24.6 12.3 24.7 12.7 24.5 L14.8 23.3 C15.2 23.1 15.3 22.6 15.1 22.2 L11.4 15.8 L18.2 15.8 C18.6 15.8 19.0 15.4 19.0 15.0 L19.0 3.0 C19.0 2.6 18.6 2.2 18.2 2.2 L4.6 2.2 C4.2 2.2 3.8 2.2 3.5 2.2 Z"
+        fill="currentColor" />
     </svg>
   </div>
 
@@ -166,7 +167,7 @@
               </a>
             </div>
             <div class="cta-secondary-wrap">
-              <a href="jothik resume-fnal.pdf" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer" title="View Resume">
+              <a href="jothik resume-final.pdf" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer" title="View Resume">
                 Resume <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
               <a href="#contact" class="link-btn">Let's Talk <i class="fa-solid fa-chevron-right"></i></a>
@@ -271,11 +272,11 @@
           <!-- Content Col -->
           <div class="about-text-col reveal-left">
             <p class="about-lead">
-              I’m <strong>Jothik Kanth</strong>, an AI/ML builder pursuing B.Tech at ICFAI Hyderabad. My journey began
+              I'm <strong>Jothik Kanth</strong>, an AI/ML builder pursuing B.Tech at ICFAI Hyderabad. My journey began
               in the world of hardware and device testing, which forged a deep <span>systems-first mindset</span>.
             </p>
             <p class="about-body">
-              Today, I translate that technical rigor into building high-performance AI systems. Whether it’s real-time
+              Today, I translate that technical rigor into building high-performance AI systems. Whether it's real-time
               computer vision or complex NLP pipelines, I focus on building solutions that are not just theoretical, but
               <strong>execution-ready</strong>.
             </p>
@@ -998,49 +999,58 @@ model = AutoModel.from_pretrained(<span class="token string">"jothik/sentiment-b
               </a>
               <a href="https://github.com/Jothik1506-ai" target="_blank" rel="noopener" class="contact-link-item">
                 <div class="clink-icon"><i class="fa-brands fa-github"></i></div>
-                <div><strong>GitHub</strong><span>View repositories</span></div>
+                <div><strong>GitHub</strong><span>Jothik1506-ai</span></div>
+              </a>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <div class="contact-social">
+              <a href="https://github.com/Jothik1506-ai" target="_blank" rel="noopener" title="GitHub" class="social-link">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/vanamjothik" target="_blank" rel="noopener" title="LinkedIn" class="social-link">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:vanamjothik@gmail.com" title="Email" class="social-link">
+                <i class="fa-solid fa-envelope"></i>
               </a>
             </div>
           </div>
 
           <!-- Form -->
-          <div class="contact-form-col reveal-right">
-            <form class="contact-form" id="contactForm" novalidate>
-              <div class="form-row-two">
-                <div class="form-group">
-                  <input type="text" id="cf-name" name="name" class="form-input" placeholder=" " required
-                    autocomplete="name">
-                  <label for="cf-name" class="form-label">Your Name</label>
+          <div class="contact-form reveal-right">
+            <form id="contactForm" class="form-group">
+              <div class="form-row">
+                <div class="form-col">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Jothik Kanth" required>
                 </div>
-                <div class="form-group">
-                  <input type="email" id="cf-email" name="email" class="form-input" placeholder=" " required
-                    autocomplete="email">
-                  <label for="cf-email" class="form-label">Email Address</label>
+                <div class="form-col">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="hello@example.com" required>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="text" id="cf-subject" name="subject" class="form-input" placeholder=" " autocomplete="off">
-                <label for="cf-subject" class="form-label">Subject (Optional)</label>
+
+              <div class="form-row">
+                <div class="form-col full">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="Let's collaborate on AI..." required>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea id="cf-message" name="message" class="form-input form-textarea" placeholder=" " required
-                  rows="5"></textarea>
-                <label for="cf-message" class="form-label">Your Message</label>
+
+              <div class="form-row">
+                <div class="form-col full">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg btn-full magnetic" id="submitBtn">
-                <span class="btn-label">Send Message</span>
-                <i class="fa-solid fa-paper-plane btn-icon-right"></i>
-                <i class="fa-solid fa-spinner fa-spin btn-spinner" style="display:none"></i>
+
+              <button type="submit" class="btn btn-primary btn-lg">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
               </button>
-              <p class="form-msg form-success" id="formSuccess" style="display:none">
-                <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
-              </p>
-              <p class="form-msg form-error" id="formError" style="display:none">
-                <i class="fa-solid fa-circle-xmark"></i> Something went wrong. Please try again.
-              </p>
             </form>
           </div>
-
         </div>
       </div>
     </section>
@@ -1050,101 +1060,13 @@ model = AutoModel.from_pretrained(<span class="token string">"jothik/sentiment-b
   <!-- ════════════════ FOOTER ════════════════ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#home" class="footer-logo">JK<span>.</span></a>
-          <p class="footer-tagline">Building intelligent solutions<br>at the edge of AI &amp; code.</p>
-          <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/vanamjothik" target="_blank" rel="noopener" aria-label="LinkedIn"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/Jothik1506-ai" target="_blank" rel="noopener" aria-label="GitHub"><i
-                class="fa-brands fa-github"></i></a>
-            <a href="mailto:vanamjothik@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sections</h4>
-          <ul>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#showcase">Showcase</a></li>
-            <li><a href="#experience">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Stack</h4>
-          <ul>
-            <li>Python &amp; AI / ML</li>
-            <li>JavaScript</li>
-            <li>React &amp; FastAPI</li>
-            <li>Data Science</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Jothik Kanth. Crafted with intention.</p>
-        <button class="back-top-btn" id="backTop" aria-label="Back to top">
-          <i class="fa-solid fa-arrow-up"></i>
-        </button>
+      <div class="footer-content">
+        <p>&copy; 2026 Jothik Kanth. All rights reserved. · <a href="#home">Back to Top</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- ════════════════ FLOATING CHAT ════════════════ -->
-  <div class="floating-chat" id="floatingChat">
-    <div class="chat-popup glass" id="chatPopup">
-      <div class="chat-head">
-        <div class="chat-head-left">
-          <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
-          <div>
-            <strong>Portfolio Assistant</strong>
-            <span class="chat-status-row"><span class="chat-online-dot"></span>Active</span>
-          </div>
-        </div>
-        <button class="chat-close-btn" onclick="toggleChat()" aria-label="Close chat">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div class="chat-msgs" id="chatMsgs">
-        <div class="chat-msg chat-bot">
-          <div class="chat-bubble">Hi! 👋 I'm Jothik's portfolio assistant. What would you like to know?</div>
-        </div>
-        <div class="chat-suggestions" id="chatSuggestions">
-          <button class="chat-suggest-btn" data-msg="View projects">View projects</button>
-          <button class="chat-suggest-btn" data-msg="Contact Jothik">Contact Jothik</button>
-          <button class="chat-suggest-btn" data-msg="Skills overview">Skills overview</button>
-        </div>
-      </div>
-      <div class="chat-input-row">
-        <input type="text" id="chatInput" class="chat-text-input" placeholder="Ask something…">
-        <button class="chat-send-btn" id="chatSendBtn" aria-label="Send message">
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </div>
-    </div>
-    <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Open portfolio assistant">
-      <i class="fa-solid fa-comment-dots chat-fab-icon"></i>
-      <i class="fa-solid fa-xmark chat-fab-close" style="display:none"></i>
-      <span class="chat-fab-badge">1</span>
-    </button>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="script.js?v=1.2"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
